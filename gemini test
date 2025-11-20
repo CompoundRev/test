@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Plastic Surgery Miami - Mommy Makeover</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Variables for Brand Colors */
+        :root {
+            --primary-color: #013243; /* Dark Teal/Blue */
+            --accent-color: #F06E2B; /* Bright Orange */
+            --light-bg: #f7f7f7;
+            --white: #ffffff;
+            --text-color: #333333;
+        }
+
+        /* Base Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            line-height: 1.2;
+            margin-top: 0;
+        }
+
+        /* Utility Classes */
+        .text-center { text-align: center; }
+        .bg-primary { background-color: var(--primary-color); color: var(--white); }
+        .bg-light { background-color: var(--light-bg); }
+        .py-5 { padding: 80px 0; }
+        .py-3 { padding: 40px 0; }
+        
+        /* CTA Button Styling */
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: var(--accent-color);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #e06527; /* Slightly darker accent */
+            transform: translateY(-2px);
+        }
+        
+        /* --- Header/Nav --- */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header .logo {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+        header nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 25px;
+            transition: color 0.3s;
+        }
+        header nav a:hover {
+            color: var(--accent-color);
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* --- Hero Section --- */
+        #hero {
+            padding: 100px 0;
+            background: linear-gradient(rgba(1, 50, 67, 0.9), rgba(1, 50, 67, 0.7)), url('https://i.imgur.com/8L8bF7y.jpeg') no-repeat center center/cover; /* Placeholder for a relevant background image */
+            color: var(--white);
+            text-align: center;
+        }
+
+        #hero .mini-headline {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+
+        #hero h1 {
+            font-size: 3em;
+            color: var(--white);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        #hero p {
+            font-size: 1.3em;
+            font-weight: 300;
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+        }
+
+        .vsl-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 40px auto;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .vsl-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* --- Testimonials --- */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            background-color: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+        
+        /* --- Surgeon Section --- */
+        #surgeon {
+            background-color: var(--light-bg);
+        }
+        .surgeon-content {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .surgeon-content img {
+            width: 300px;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .surgeon-content h2 {
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+
+        /* --- Pillars Section --- */
+        .pillar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .pillar-card {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border-top: 5px solid var(--accent-color);
+        }
+
+        .pillar-card h3 {
+            color: var(--accent-color);
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        /* --- Note/FAQ Section --- */
+        #note {
+            background-color: var(--primary-color);
+            padding: 60px 0;
+        }
+        #note h2 {
+            color: var(--accent-color);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .note-content {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            font-style: italic;
+        }
+
+        /* FAQ */
+        .faq-item {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .faq-item strong {
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        /* --- Final CTA --- */
+        #final-cta {
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+        #final-cta p {
+            font-size: 1.5em;
+            max-width: 900px;
+            margin: 0 auto 30px auto;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #001a24; 
+            color: #ccc;
+            padding: 30px 0;
+            font-size: 0.9em;
+            text-align: center;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .surgeon-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .surgeon-content img {
+                max-width: 250px;
+            }
+            #hero h1 {
+                font-size: 2.5em;
+            }
+        }
+        @media (max-width: 600px) {
+            #hero h1 {
+                font-size: 2em;
+            }
+            .btn {
+                padding: 12px 25px;
+                font-size: 0.9em;
+            }
+            header .header-content {
+                flex-direction: column;
+            }
+            header nav {
+                margin-top: 10px;
+            }
+            header nav a {
+                margin: 0 10px;
+            }
+            .testimonial-card img {
+                 height: 150px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <a href="https://www.smartplasticsurgerymiami.com/" class="logo">SMART PLASTIC SURGERY</a>
+            <nav>
+                <a href="#surgeon">Meet Dr. Shanklin</a>
+                <a href="#results">Results</a>
+                <a href="#faq">FAQ</a>
+                <a href="#" class="btn" style="padding: 10px 20px; font-size: 0.9em;">Book Consultation</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <p class="mini-headline">If you're a South Florida mom ready to reclaim the confidence pregnancy took away, this is for you.</p>
+            <h1>Reclaim the Confident, Beautiful Woman You Were Before Kids—With a Mommy Makeover That Looks and Feels Completely Natural</h1>
+            <p>Combining advanced surgical techniques with compassionate, patient-first care to deliver the transformation you've been dreaming about.</p>
+
+            <div class="vsl-container">
+                <iframe src="https://www.youtube.com/embed/6xtYZjriv9w?autoplay=0&controls=1&rel=0&showinfo=0" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+            </div>
+            
+            <a href="#" class="btn btn-hero">Yes, I'm Ready to Feel Like Me Again</a>
+        </div>
+    </section>
+
+    <section id="results" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2>Real Miami Moms, Real Transformations</h2>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <img src="https://i.imgur.com/ksmRAXI.jpeg" alt="Mommy Makeover Testimonial 1">
+                    <p>"The results are stunning, and I finally feel like me again. Dr. Shanklin is truly an artist."</p>
+                </div>
+                <div class="testimonial-card">
+                    <img src="https://i.imgur.com/e2hMmFH.jpeg" alt="Mommy Makeover Testimonial 2">
+                    <p>"Safe, professional, and the care was personalized. I couldn't be happier with my new confidence."</p>
+                </div>
+                <div class="testimonial-card">
+                    <img src="https://i.imgur.com/3I7ndaH.jpeg" alt="Mommy Makeover Testimonial 3">
+                    <p>"Worth every penny! I look better than I did before kids. Highly recommend Smart Plastic Surgery."</p>
+                </div>
+                <div class="testimonial-card">
+                    <img src="https://i.imgur.com/KQ9XOey.jpeg" alt="Mommy Makeover Testimonial 4">
+                    <p>"Natural results that exceeded my expectations. I can wear a bikini again!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="surgeon" class="py-5">
+        <div class="container">
+            <div class="surgeon-content">
+                <img src="https://i.imgur.com/5kfPUMx.png" alt="Headshot of Dr. Joel L. Shanklin">
+                <div>
+                    <h2>Meet Dr. Joel L. Shanklin</h2>
+                    <p>Dr. Joel L. Shanklin is a **board-certified plastic surgeon** specializing in mommy makeover procedures for women in Miami and beyond. With advanced training in body contouring, breast surgery, and combination procedures, Dr. Shanklin has helped thousands of mothers achieve natural, life-changing transformations.</p>
+                    <p>Dr. Shanklin performs procedures at Smart Plastic Surgery's state-of-the-art, **accredited facility** in Kendall, Florida, equipped with the latest surgical technology and safety protocols. His patient-first approach combines surgical excellence with transparent communication, realistic expectations, and individualized care plans designed to fit your body, your goals, and your lifestyle.</p>
+                    <p>From your first consultation to your final follow-up, Dr. Shanklin is committed to delivering results that exceed expectations while ensuring your safety and comfort remain the top priority.</p>
+                    
+                    <a href="#" class="btn" style="margin-top: 20px;">Schedule My Consultation Today</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="py-5 bg-primary">
+        <div class="container text-center">
+            <h2 style="color: var(--white); margin-bottom: 50px;">Why People Choose Smart Plastic Surgery</h2>
+            <div class="pillar-grid">
+                <div class="pillar-card">
+                    <h3 style="color: var(--accent-color);">Natural-Looking Results</h3>
+                    <p>We don't believe in overdone, "plastic" transformations. Our goal is to help you look like the best, most confident version of yourself—not someone else.</p>
+                </div>
+                <div class="pillar-card">
+                    <h3 style="color: var(--accent-color);">Personalized Care</h3>
+                    <p>No cookie-cutter approach. Every mommy makeover is customized to your unique body, goals, and lifestyle. You'll never feel rushed or pressured.</p>
+                </div>
+                <div class="pillar-card">
+                    <h3 style="color: var(--accent-color);">Safety First</h3>
+                    <p>Our state-of-the-art, accredited facility in Kendall is equipped with advanced technology and follows the highest safety standards. Your well-being is our top priority.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="note">
+        <div class="container">
+            <h2>A Note From the Desk of Dr. Joel L. Shanklin</h2>
+            <div class="note-content">
+                <p>If you're reading this, I'm guessing you've been thinking about this for a while. Maybe you've scrolled through before-and-after photos late at night. Maybe you've wondered if a mommy makeover could really help you feel like yourself again. Maybe you're worried about the cost, the recovery, or whether the results will be worth it.</p>
+                <p>I want you to know: **I see you.** I've worked with hundreds of mothers who felt exactly the way you do right now. And I've watched them walk out of our office weeks later—standing taller, smiling bigger, and finally feeling proud of the body they see in the mirror.</p>
+                <p>This isn't about vanity. It's about you deserving to feel confident, beautiful, and comfortable in your own skin again. You've given so much to your family. Now it's time to give something back to yourself.</p>
+                <p>If you're ready to take that first step, I'd be honored to meet you. Let's talk about what's possible for your body—and your life.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Frequently Asked Questions</h2>
+            <div style="max-width: 800px; margin: 40px auto;">
+                <div class="faq-item">
+                    <strong>Q: How long is the recovery for a mommy makeover?</strong>
+                    A: Most moms are back to light activities within 2 weeks and full activity within 6–8 weeks. We'll give you a personalized recovery plan so you know exactly what to expect.
+                </div>
+                <div class="faq-item">
+                    <strong>Q: Will my results look natural, or will it be obvious I had surgery?</strong>
+                    A: Our goal is always natural, beautiful results. You'll look like the best version of yourself—not like someone else.
+                </div>
+                <div class="faq-item">
+                    <strong>Q: Can I get a mommy makeover if I'm planning to have more kids?</strong>
+                    A: We typically recommend waiting until you're done having children to ensure your results last. We'll discuss your timeline during your consultation.
+                </div>
+                <div class="faq-item">
+                    <strong>Q: How much does a mommy makeover cost?</strong>
+                    A: Pricing varies based on your specific needs, but we offer transparent pricing and flexible financing options. You'll get a clear quote during your free consultation.
+                </div>
+                <div class="faq-item">
+                    <strong>Q: Is a mommy makeover safe?</strong>
+                    A: Yes. Dr. Shanklin is board-certified, and all procedures are performed in our fully accredited facility with the highest safety standards. Your safety is our top priority.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="final-cta">
+        <div class="container">
+            <p>You've spent months, maybe years, wondering what it would feel like to love your body again. To wear what you want, feel confident in your own skin, and finally see the woman you remember when you look in the mirror. That transformation is closer than you think. Book your free consultation with Dr. Shanklin today and take the first step toward the body and confidence you deserve.</p>
+            <a href="#" class="btn btn-final">Yes, I'm Ready to Feel Like Me Again</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Smart Plastic Surgery Miami. All rights reserved. | <a href="https://www.smartplasticsurgerymiami.com/" style="color: #ccc;">Official Site</a></p>
+            <p style="margin-top: 10px; font-size: 0.8em;">*Disclaimer: Results may vary. Consultation required to determine eligibility and final pricing.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
